@@ -1,0 +1,1 @@
+let billAmount = Number.toFixed(2)

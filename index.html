@@ -1,85 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  
-  
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles.css"
+    />
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <span>SPLI</span>
+        <span>TTER</span>
+      </header>
 
-</head>
-<body class="column">
-  <header class="column">
-    <span>SPLI</span>
-    <span>TTER</span>
-  </header>
-  
-  <main class="row">
-    <div class="left">
-      <form>
-        <section id="bill">
-          <label id="bill-label" for="bill" >Bill</label>
-          <input id="bill-amount" type="number">
-          <script src="tipCalculator.js"></script>
-        </section>
-        
-        <section id="select-tip">
-          <p>Select Tip %</p>
-          <div id="tip-button-wrapper">
-            <div class="percentages">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
+      <main>
+        <div class="left">
+          <form>
+            <section id="bill">
+              <label
+                class="label"
+                for="bill-amount"
+                >Bill</label
+              >
+              <input
+                id="bill-amount"
+                type="number"
+                step=".01"
+              />
+            </section>
+
+            <section id="select-tip">
+              <p class="label">Select Tip %</p>
+              <div class="tip-buttons">
+                <button
+                  id="5"
+                  value="5"
+                >
+                  5%
+                </button>
+                <button
+                  id="10"
+                  value="10"
+                >
+                  10%
+                </button>
+                <button
+                  id="15"
+                  value="15"
+                >
+                  15%
+                </button>
+                <button
+                  id="20"
+                  value="20"
+                >
+                  20%
+                </button>
+                <button
+                  id="25"
+                  value="25"
+                >
+                  25%
+                </button>
+                <input
+                  type="number"
+                  placeholder="Custom"
+                  id="custom"
+                />
+              </div>
+            </section>
+
+            <section id="person-count">
+              <label
+                class="label"
+                for="number-of-people"
+                >Number of people</label
+              >
+              <input
+                id="number-of-people"
+                type="number"
+              />
+            </section>
+          </form>
+        </div>
+
+        <div class="right">
+          <div class="dollar-amount">
+            <div class="column">
+              <span>Tip Amount</span>
+              <span class="person">/ person</span>
             </div>
-            <div class="percentages">
-              <button>25%</button>
-              <button>50%</button>
-              <input type="number" placeholder="Custom"/>
+            <div
+              id="tip-per-person"
+              class="money"
+            >
+              $0.00
             </div>
           </div>
-        </section>
-        
-        <section id="person-count">
-          <label for="number-of-people">Number of people</label>
-          <input id="number-of-people" type="number">
-        </section>
-      </form>
-    </div>
-    
-    <div class="right">
-      <div class="row dollar-amount">
-        <div class="column">
-          <span>Tip Amount</span>
-          <span>/ person</span>
+
+          <div class="dollar-amount">
+            <div class="column">
+              <span>Total</span>
+              <span class="person">/ person</span>
+            </div>
+            <div
+              id="total-per-person"
+              class="money"
+            >
+              $0.00
+            </div>
+          </div>
+
+          <div>
+            <button id="reset">RESET</button>
+          </div>
         </div>
-        <div>$0.00</div>
-      </div>
-      
-      <div class="row dollar-amount">
-        <div class="column">
-          <span>Total</span>
-          <span>/ person</span>
+      </main>
+
+      <footer>
+        <div>
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Chaley Boatmon</a>.
         </div>
-        <div>$0.00</div>
-      </div>
-      
-      <div>
-        <button id="reset">RESET</button>
-      </div>
+      </footer>
     </div>
-  </main>
-  
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Chaley Boatmon</a>.
-    </div>
-  </footer>
-</body>
+    <script src="tipCalculator.js"></script>
+  </body>
 </html>
